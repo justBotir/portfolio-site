@@ -23,11 +23,12 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/photo.png"
+            src="/assets/photo.webp"
             priority
             quality={100}
             fill
-            alt=""
+            sizes="(max-width: 1280px) 298px, 498px"
+            alt="Botir Qakhramoniy"
             className="object-contain"
           />
         </motion.div>

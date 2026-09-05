@@ -54,7 +54,6 @@ const about = {
 
 // experience data
 const experience = {
-  icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
     "I have been actively learning and building web projects, focusing on practical skills through personal and educational projects.",
@@ -75,7 +74,6 @@ const experience = {
 
 // education data
 const education = {
-  icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
     "I have been interested in programming from a young age and continue to learn as new technologies emerge. At the same time, due to my interest in business, I chose to study business administration at university.",
@@ -158,6 +156,7 @@ const Resume = () => {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
+        <h1 className="sr-only">Resume</h1>
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"

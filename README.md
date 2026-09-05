@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Botir Qakhramoniy — Portfolio
 
-## Getting Started
+Personal portfolio of **Botir Qakhramoniy**, a full-stack developer from Khorezm, Uzbekistan.
 
-First, run the development server:
+Live: https://botirportfolio.vercel.app
+
+## Tech stack
+
+- [Next.js 14](https://nextjs.org/) (App Router)
+- [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) (Radix primitives)
+- [Framer Motion](https://www.framer.com/motion/) for page and stair transitions
+- [Swiper](https://swiperjs.com/) for the project slider
+- Telegram Bot API for the contact form
+
+## Pages
+
+| Route       | Content                                       |
+| ----------- | --------------------------------------------- |
+| `/`         | Intro, socials, CV download, stats            |
+| `/services` | Services offered                              |
+| `/resume`   | Experience, education, skills, about          |
+| `/work`     | Project slider                                |
+| `/contact`  | Contact form (sends to Telegram) and contacts |
+
+## Getting started
 
 ```bash
+npm install
+cp .env.example .env.local   # then fill in the values
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The contact form posts to `app/api/contact/route.js`, which forwards the message
+to Telegram. Two variables are required:
 
-## Learn More
+| Variable             | Where to get it                                                                 |
+| -------------------- | ------------------------------------------------------------------------------- |
+| `TELEGRAM_BOT_TOKEN` | Create a bot with [@BotFather](https://t.me/BotFather)                            |
+| `TELEGRAM_CHAT_ID`   | Message your bot, then read `result[0].message.chat.id` from `/getUpdates`         |
 
-To learn more about Next.js, take a look at the following resources:
+Locally they live in `.env.local` (git-ignored). On Vercel add them under
+**Project → Settings → Environment Variables**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm run dev     # development server
+npm run build   # production build
+npm run start   # serve the production build
+npm run lint    # eslint
+```
 
-## Deploy on Vercel
+## Where to edit the content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Personal data, experience, education, skills — `app/resume/page.jsx`
+- Projects — `app/work/page.jsx`
+- Services — `app/services/page.jsx`
+- Stats on the home page — `components/Stats.jsx`
+- Social links — `components/Social.jsx`
+- Navigation — `lib/navLinks.js`
+- CV file — `public/cv/Botir_CV.pdf`

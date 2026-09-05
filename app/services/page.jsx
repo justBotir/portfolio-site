@@ -9,28 +9,28 @@ const services = [
     title: "Web Development",
     description:
       "I create fast, responsive, and modern websites using the latest web technologies to ensure a seamless user experience.",
-    href: "",
+    href: "/contact",
   },
   {
     num: "02",
     title: "UI/UX Design",
     description:
       "I design clean and user-friendly interfaces that provide smooth and enjoyable experiences for users.",
-    href: "",
+    href: "/contact",
   },
   {
     num: "03",
     title: "Backend Development",
     description:
       "I develop reliable backend solutions, creating fast APIs, managing databases, and ensuring smooth server-side functionality.",
-    href: "",
+    href: "/contact",
   },
   {
     num: "04",
     title: "SEO",
     description:
       "I optimize websites to rank higher on search engines and attract more organic visitors.",
-    href: "",
+    href: "/contact",
   },
 ];
 
@@ -40,6 +40,7 @@ const Services = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
+        <h1 className="sr-only">Services</h1>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
@@ -61,6 +62,7 @@ const Services = () => {
                   </div>
                   <Link
                     href={service.href}
+                    aria-label={`Contact me about ${service.title}`}
                     className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                   >
                     <BsArrowDownRight className="text-primary text-3xl" />
