@@ -2,7 +2,7 @@
 
 Personal portfolio of **Botir Qakhramoniy**, a full-stack developer from Khorezm, Uzbekistan.
 
-Live: https://botirportfolio.vercel.app
+Live: not deployed yet
 
 ## Tech stack
 
@@ -41,6 +41,7 @@ to Telegram. Two variables are required:
 | -------------------- | ------------------------------------------------------------------------------- |
 | `TELEGRAM_BOT_TOKEN` | Create a bot with [@BotFather](https://t.me/BotFather)                            |
 | `TELEGRAM_CHAT_ID`   | Message your bot, then read `result[0].message.chat.id` from `/getUpdates`         |
+| `NEXT_PUBLIC_SITE_URL` | Optional — the public URL, for canonical links, sitemap and OG tags. Vercel fills this in automatically |
 
 Locally they live in `.env.local` (git-ignored). On Vercel add them under
 **Project → Settings → Environment Variables**.

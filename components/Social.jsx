@@ -6,7 +6,7 @@ const socials = [
   {
     icon: <FaGithub />,
     label: "GitHub",
-    path: "https://github.com/Qakhramoniy-hub",
+    path: "https://github.com/justBotir",
   },
   {
     icon: <FaLinkedinIn />,

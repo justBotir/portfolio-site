@@ -1,6 +1,8 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+import { siteUrl } from "@/lib/site";
+
 // components
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
@@ -13,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://botirportfolio.vercel.app"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Botir Qakhramoniy | Full Stack Developer",
     template: "%s | Botir Qakhramoniy",
@@ -34,7 +36,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://botirportfolio.vercel.app",
+    url: siteUrl,
     siteName: "Botir Qakhramoniy",
     title: "Botir Qakhramoniy | Full Stack Developer",
     description:

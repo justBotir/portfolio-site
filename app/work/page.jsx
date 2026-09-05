@@ -29,7 +29,7 @@ const projects = [
     stack: [{ name: "Javascript" }, { name: "HTML" }, { name: "CSS" }],
     image: "/assets/work/thumb1.jpg",
     live: "",
-    github: "https://github.com/Qakhramoniy-hub/Expanse-tracker",
+    github: "https://github.com/justBotir/Expanse-tracker",
   },
   {
     num: "02",
@@ -40,7 +40,7 @@ const projects = [
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Nest.js" }],
     image: "/assets/work/thumb2.jpg",
     live: "",
-    github: "https://github.com/Qakhramoniy-hub/technoshop-front",
+    github: "https://github.com/justBotir/technoshop-front",
   },
   {
     num: "03",
@@ -51,7 +51,7 @@ const projects = [
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
     image: "/assets/work/thumb3.jpg",
     live: "",
-    github: "https://github.com/Qakhramoniy-hub/todo-app",
+    github: "https://github.com/justBotir/todo-app",
   },
 ];
 
