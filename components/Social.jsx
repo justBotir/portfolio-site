@@ -11,7 +11,7 @@ const socials = [
   {
     icon: <FaLinkedinIn />,
     label: "LinkedIn",
-    path: "https://linkedin.com/in/BotirQakhramoniy",
+    path: "https://www.linkedin.com/in/botir-qakhramoniy-650424370",
   },
   {
     icon: <FaTelegram />,
