@@ -2,7 +2,7 @@
 
 Personal portfolio of **Botir Qakhramoniy**, a full-stack developer from Khorezm, Uzbekistan.
 
-Live: not deployed yet
+Live: https://botirportfolio.vercel.app
 
 ## Tech stack
 
